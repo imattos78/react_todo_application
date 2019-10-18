@@ -8,7 +8,7 @@ class Header extends React.Component{
         return (
             <div className="col-12 top-image">
             <img className="logo" src={logo} alt="logo"></img>
-            </div> 
+             </div> 
 
         )
     }

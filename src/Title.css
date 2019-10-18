@@ -1,0 +1,8 @@
+.title{
+    padding-top: 10px;
+  }
+  .title,.input{
+    display: flex;
+    top: 15%;
+    justify-content: center;
+  }
