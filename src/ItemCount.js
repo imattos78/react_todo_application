@@ -7,8 +7,10 @@ class ItemCount extends React.Component{
             <div className="row d-none d-md-block">
             <div className="col intro-component">
                 <p>You have {this.props.count} products to buy in the list:</p>
+               
             </div>
         </div>
+       
 
         );
     }

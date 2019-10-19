@@ -14,7 +14,9 @@ function App() {
       <Title />
       <Input />
       <ItemCount count={6} />
-      <Item />
+      <Item text="Wine" bought={false}/>
+      <Item text="Milk" bought={true} />
+      <Item text="Beer" bought={false} />
      
       
     </div>
