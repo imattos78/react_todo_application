@@ -1,0 +1,6 @@
+/* Intro Component */
+.intro-component{
+    display: flex;
+    justify-content: center;
+    padding-right: 16%;
+  }

@@ -1,7 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
 import "./Title.css"
 
-class Title extends React.Component {
+class Title extends Component {
     render() {
         return(
             <div className="col-12 title input-group mb-3 col- col-sm-">

@@ -1,21 +1,4 @@
 
-/* Input Bar */
-.input-bar{
-    width: 62%;
-    padding-left: 8px;
-   
-}
-.button{
-    padding-left: 10px;
-  }
-/* Intro Component */
-
-.intro-component{
-    display: flex;
-    justify-content: center;
-    padding-right: 16%;
-  }
-
    /* Big Buttons */
    .b-left{
        margin-top: 10px;
@@ -86,7 +69,12 @@
   .left{
       display: flex;
       justify-content: flex-end;
+     
       
+  }
+  .right{
+    display: flex;
+    justify-content: flex-end;
   }
   .buttons:focus{
     outline: 0;
@@ -101,21 +89,17 @@
   .text{
       display: flex;
       justify-content: center;  
-      padding: 0;
-     
-      
-      
-
   }
 
   /* Output List */
   #prod-to-buy{
     padding-top: 15px;
-    padding-right: 0px;
     font-size: 100%;
-    
-   
   }
+
+
+  /* Arrow */
+  
   .arrow{
       color: red;
       font-size: 1.2em;
