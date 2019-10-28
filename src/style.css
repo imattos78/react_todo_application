@@ -1,4 +1,5 @@
 
+  
    /* Big Buttons */
    .b-left{
        margin-top: 10px;
@@ -55,20 +56,21 @@
   }
   .add-icon, .check-icon {
     
-    color: #4CAF50;
+    color: rgb(139, 231, 142);
     font-size: 2em;
     
     
    }
 
    .cruz-icon, .trash-icon{
-    color: rgb(248, 2, 2);
+    color: rgb(255, 121, 121);
     font-size: 2em;
     
    }
   .left{
       display: flex;
       justify-content: flex-end;
+    
      
       
   }
@@ -82,13 +84,18 @@
   .buttons:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-size: 1.1em;
+    background-color: rgb(121, 118, 118);
     
   }
 
   /* Product-to-buy text */
   .text{
       display: flex;
-      justify-content: center;  
+      justify-content: center;
+      color: #ffff; 
+  }
+  .text-align{
+    margin-top: 15px;
   }
 
   /* Output List */
@@ -102,9 +109,12 @@
   
   .arrow{
       color: red;
-      font-size: 1.2em;
-      padding-right: 10px;
-           
+      font-size: 1.2em; 
+      padding: 0;          
+  }
+  .arrow-align{
+    display: flex;
+    justify-content: flex-start;
   }
   p{
       font-size: 1.2em;
@@ -121,6 +131,9 @@
     }
     .input-bar{
       width: 40%;
+    }
+    .text{
+      color:black;
     }
     
 }

@@ -11,12 +11,12 @@ import './App.css';
 class App extends Component {
   state = {
     products: [
-      {text: "Tomato", bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Avocado", bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Bread", bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Water", bought: false, date: "2019-10-21", id: uuid()},
-      {text: "Beer", bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Pizza", bought: false, date: "2019-10-21", id: uuid()}
+      {text: "Tomato", quantity: 2, bought: true, date: "2019-10-21", id: uuid()},
+      {text: "Avocado",quantity: 3, bought: true, date: "2019-10-21", id: uuid()},
+      {text: "Bread", quantity: 1, bought: true, date: "2019-10-21", id: uuid()},
+      {text: "Water", quantity: 3,bought: false, date: "2019-10-21", id: uuid()},
+      {text: "Beer", quantity: 6,bought: true, date: "2019-10-21", id: uuid()},
+      {text: "Pizza", quantity: 1,bought: false, date: "2019-10-21", id: uuid()}
 
     ]
   }
@@ -37,7 +37,8 @@ class App extends Component {
   render() {
 
   const boughtProduct = this.state.products.filter(prod => prod.bought);
-  const pendingBuy = this.state.products.filter(prod => !prod.bought)
+  const pendingBuy = this.state.products.filter(prod => !prod.bought);
+  
   
   return (
     <div className="container">
@@ -45,7 +46,7 @@ class App extends Component {
       <Title />
       <Input addNewProductFunc={this.addNewProduct} />
       <ItemCount count={pendingBuy.length} />
-      {pendingBuy.map(prod => <Item text={prod.text} bought={prod.bought} key={prod.id} />
+      {pendingBuy.map(prod => <Item text={prod.text} bought={prod.bought} quantity={prod.quantity} date={prod.date} key={prod.id} />
         )}
 
          <h5 className="title">You recently bought: </h5>
