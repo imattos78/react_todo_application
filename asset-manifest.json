@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/react_todo_application/static/css/main.d5a60f9f.chunk.css",
-    "main.js": "/react_todo_application/static/js/main.66b7f2d5.chunk.js",
-    "main.js.map": "/react_todo_application/static/js/main.66b7f2d5.chunk.js.map",
+    "main.css": "/react_todo_application/static/css/main.b64e7495.chunk.css",
+    "main.js": "/react_todo_application/static/js/main.f2709b1f.chunk.js",
+    "main.js.map": "/react_todo_application/static/js/main.f2709b1f.chunk.js.map",
     "runtime-main.js": "/react_todo_application/static/js/runtime-main.659711b3.js",
     "runtime-main.js.map": "/react_todo_application/static/js/runtime-main.659711b3.js.map",
-    "static/js/2.1839a9aa.chunk.js": "/react_todo_application/static/js/2.1839a9aa.chunk.js",
-    "static/js/2.1839a9aa.chunk.js.map": "/react_todo_application/static/js/2.1839a9aa.chunk.js.map",
+    "static/js/2.26bf16ba.chunk.js": "/react_todo_application/static/js/2.26bf16ba.chunk.js",
+    "static/js/2.26bf16ba.chunk.js.map": "/react_todo_application/static/js/2.26bf16ba.chunk.js.map",
     "index.html": "/react_todo_application/index.html",
-    "precache-manifest.ac1d7a5cd82ece96d717a3c6a68797ea.js": "/react_todo_application/precache-manifest.ac1d7a5cd82ece96d717a3c6a68797ea.js",
+    "precache-manifest.c790e0b1727ff3c2e978f6097b06f987.js": "/react_todo_application/precache-manifest.c790e0b1727ff3c2e978f6097b06f987.js",
     "service-worker.js": "/react_todo_application/service-worker.js",
-    "static/css/main.d5a60f9f.chunk.css.map": "/react_todo_application/static/css/main.d5a60f9f.chunk.css.map",
-    "static/media/Header.css": "/react_todo_application/static/media/background_search_desktop.902df4c5.jpg",
-    "static/media/App.css": "/react_todo_application/static/media/background_search_mobile.5d0905e6.jpg",
-    "static/media/market-logo.png": "/react_todo_application/static/media/market-logo.eef9eda0.png"
+    "static/css/main.b64e7495.chunk.css.map": "/react_todo_application/static/css/main.b64e7495.chunk.css.map",
+    "static/media/Header.css": "/react_todo_application/static/media/market-logo.eef9eda0.png",
+    "static/media/App.css": "/react_todo_application/static/media/background_search_mobile.5d0905e6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.659711b3.js",
-    "static/js/2.1839a9aa.chunk.js",
-    "static/css/main.d5a60f9f.chunk.css",
-    "static/js/main.66b7f2d5.chunk.js"
+    "static/js/2.26bf16ba.chunk.js",
+    "static/css/main.b64e7495.chunk.css",
+    "static/js/main.f2709b1f.chunk.js"
   ]
 }

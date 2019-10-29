@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a76c87c9d53a23f04c9065d03bfc1dfb",
+    "revision": "acffad86d2ff571cf9a95888f9a904a9",
     "url": "/react_todo_application/index.html"
   },
   {
-    "revision": "536535a5e32fa08defcb",
-    "url": "/react_todo_application/static/css/main.d5a60f9f.chunk.css"
+    "revision": "752da30320fe1e7f3747",
+    "url": "/react_todo_application/static/css/main.b64e7495.chunk.css"
   },
   {
-    "revision": "87b59813b3661f0e2092",
-    "url": "/react_todo_application/static/js/2.1839a9aa.chunk.js"
+    "revision": "d9bb6e47c70920e47bb0",
+    "url": "/react_todo_application/static/js/2.26bf16ba.chunk.js"
   },
   {
-    "revision": "536535a5e32fa08defcb",
-    "url": "/react_todo_application/static/js/main.66b7f2d5.chunk.js"
+    "revision": "752da30320fe1e7f3747",
+    "url": "/react_todo_application/static/js/main.f2709b1f.chunk.js"
   },
   {
     "revision": "d742468b6b4e2f7c9b4d",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5d0905e66c87b168792e1cf920c613ee",
     "url": "/react_todo_application/static/media/background_search_mobile.5d0905e6.jpg"
+  },
+  {
+    "revision": "6aa4e367c7cde56ba3a721361b3a447c",
+    "url": "/react_todo_application/static/media/logo-mobile.6aa4e367.png"
   },
   {
     "revision": "eef9eda00697315e1a7272c938b44b9d",
