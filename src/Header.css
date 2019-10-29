@@ -20,8 +20,12 @@
      
     }
     
+    div.image{
+      content:url("./images/logo-mobile.png");
+      opacity: 0.85;
+    }
     .logo{
-      max-width: 40%;
+      max-width: 30%;
       height: auto;
       
     }
@@ -29,6 +33,10 @@
 
     .top-image{
       background-image: url('./images/background_search_desktop.jpg');
+    }
+    div.image{
+      content:url("./images/market-logo.png");
+      opacity: 1;
     }
     
     }
