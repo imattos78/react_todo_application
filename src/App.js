@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 import uuid from "uuid/v4";
-import Header from "./Header";
-import Title from "./Title";
-import Input from "./Input";
-import ItemCount from "./ItemCount";
-import Item from "./Item";
-
+import Header from "./components/header/Header";
+import Title from "./components/title/Title";
+import Input from "./components/input/Input";
+import ItemCount from "./components/itemCount/ItemCount";
+import Item from "./components/item/Item";
 import './App.css';
+
+function date() {
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; //As January is 0.
+  let yyyy = today.getFullYear();
+
+  if (dd < 10) dd = '0' + dd;
+  if (mm < 10) mm = '0' + mm;
+  return (yyyy + "-" + mm + "-" + dd);
+};
 
 class App extends Component {
   state = {
     products: [
-      {text: "Tomato", quantity: 2, bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Avocado",quantity: 3, bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Bread", quantity: 1, bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Water", quantity: 3,bought: false, date: "2019-10-21", id: uuid()},
+      {text: "Tomato", quantity: 2, bought: true, date: "2019-10-27", id: uuid()},
+      {text: "Avocado",quantity: 3, bought: true, date: "2019-10-28", id: uuid()},
+      {text: "Bread", quantity: 1, bought: false, date: "2019-10-30", id: uuid()},
+      {text: "Water", quantity: 3,bought: false, date: "2019-10-29", id: uuid()},
       {text: "Beer", quantity: 6,bought: true, date: "2019-10-21", id: uuid()},
-      {text: "Pizza", quantity: 1,bought: false, date: "2019-10-21", id: uuid()}
+      {text: "Pizza", quantity: 1,bought: false, date: "2019-10-22", id: uuid()}
 
     ]
   }
@@ -26,7 +36,7 @@ class App extends Component {
     const newProduct = {
       text: prodText,
       bought: false,
-      date: "2019-10-23",
+      date: date(),
       id: uuid()
     }
     productCopy.push(newProduct)
@@ -36,7 +46,7 @@ class App extends Component {
    }
   render() {
 
-  const boughtProduct = this.state.products.filter(prod => prod.bought);
+  const boughtProduct = this.state.products.filter(prod =>{return prod.bought}) 
   const pendingBuy = this.state.products.filter(prod => !prod.bought);
   
   

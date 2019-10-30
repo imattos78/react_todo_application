@@ -1,7 +1,19 @@
 import React, { Component } from "react"
 import "./style.css"
 
+function date(x) {
+    let today = new Date();
+    let dd = today.getDate() + x;
+    let mm = today.getMonth() + 1; //As January is 0.
+    let yyyy = today.getFullYear();
+
+    if (dd < 10) dd = '0' + dd;
+    if (mm < 10) mm = '0' + mm;
+    return (yyyy + "-" + mm + "-" + dd);
+};
+
 class Item extends Component {
+
     render() {
         return (
             <div className="row">
@@ -13,7 +25,7 @@ class Item extends Component {
                                 </i></td>
                                 <td> {!this.props.bought && this.props.text}</td>
                                 <td>{this.props.bought ? this.props.text : this.props.quantity}</td>
-                                <td>{this.props.date}</td>
+                                <td>{this.props.date === date(0) ? "Today" : this.props.date === date(1) ? "Tomorrow" : this.props.date === date(-1) ? "Yesterday" : this.props.date}</td>
 
                             </tr>
                         </tbody>
@@ -22,7 +34,7 @@ class Item extends Component {
                             </i> {this.props.text}</p> */}
                     </table>
                 </div>
-                
+
                 {/* Small buttons */}
                 <div className="col-6 show left">{!this.props.bought && (
                     <button type="button" className="buttons"><i className="fas fa-check-circle check-icon"></i></button>)}

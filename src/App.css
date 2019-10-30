@@ -2,10 +2,8 @@
   text-align: center;
 }
 
-
-
-
 .container{
+  
   background-image: url("./images/background_search_mobile.jpg");
   background-size: cover;
   background-position: center;

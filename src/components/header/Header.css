@@ -11,7 +11,6 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    /* background-image: url("./images/Market-banner.png"); */
     max-width: 100%;
     height: auto;
     background-size: cover;
@@ -21,8 +20,9 @@
     }
     
     div.image{
-      content:url("./images/logo-mobile.png");
+      content:url("../../images/logo-mobile.png");
       opacity: 0.85;
+      padding: 10px;
     }
     .logo{
       max-width: 30%;
@@ -32,10 +32,10 @@
     @media only screen and (min-width:768px){
 
     .top-image{
-      background-image: url('./images/background_search_desktop.jpg');
+      background-image: url('../../images/background_search_desktop.jpg');
     }
     div.image{
-      content:url("./images/market-logo.png");
+      content:url("../../images/market-logo.png");
       opacity: 1;
     }
     
