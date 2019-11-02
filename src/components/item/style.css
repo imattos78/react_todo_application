@@ -57,14 +57,14 @@
   .add-icon, .check-icon {
     
     color: rgb(139, 231, 142);
-    font-size: 2em;
+    font-size: 2.3em;
     
     
    }
 
    .cruz-icon, .trash-icon{
     color: rgb(255, 121, 121);
-    font-size: 2em;
+    font-size: 2.3em;
     
    }
   .left{
@@ -83,8 +83,8 @@
   }
   .buttons:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    font-size: 1.1em;
-    background-color: rgb(121, 118, 118);
+  
+    /* background-color: rgb(121, 118, 118); */
     
   }
 
@@ -99,10 +99,10 @@
   }
 
   /* Output List */
-  #prod-to-buy{
+  /* #prod-to-buy{
     padding-top: 15px;
     font-size: 100%;
-  }
+  } */
 
 
   /* Arrow */
@@ -129,9 +129,7 @@
       max-width: 20%;
       height: auto;
     }
-    .input-bar{
-      width: 40%;
-    }
+    
     .text{
       color:black;
     }

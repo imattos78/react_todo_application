@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+
 import "./style.css"
 
 function date(x) {
@@ -14,6 +15,14 @@ function date(x) {
 
 class Item extends Component {
 
+    handleDelete = e =>{
+        console.log("button was clicked", e);
+        this.props.deleteProductFunc(this.props.id)
+      }
+    handleBought = e =>{
+        this.props.boughtProductFunc(this.props.id)
+    }
+
     render() {
         return (
             <div className="row">
@@ -26,6 +35,7 @@ class Item extends Component {
                                 <td> {!this.props.bought && this.props.text}</td>
                                 <td>{this.props.bought ? this.props.text : this.props.quantity}</td>
                                 <td>{this.props.date === date(0) ? "Today" : this.props.date === date(1) ? "Tomorrow" : this.props.date === date(-1) ? "Yesterday" : this.props.date}</td>
+                               
 
                             </tr>
                         </tbody>
@@ -37,19 +47,20 @@ class Item extends Component {
 
                 {/* Small buttons */}
                 <div className="col-6 show left">{!this.props.bought && (
-                    <button type="button" className="buttons"><i className="fas fa-check-circle check-icon"></i></button>)}
+                    <button type="button" className="buttons" onClick={this.handleBought}><i className="fas fa-check-circle check-icon"></i></button>)}
                 </div>
                 <div className={this.props.bought ? "col-1 show right" : "col-1 show"}>
-                    <button type="button" className="buttons"><i className="fas fa-times-circle cruz-icon"></i></button>
+                    <button type="button" className="buttons" onClick={this.handleDelete}><i className="fas fa-times-circle cruz-icon"></i></button>
                 </div>
                 {/* Big buttons */}
                 <div className="col-3 b-left d-none d-md-block">{!this.props.bought && (
 
-                    <button type="button" className="add-button">Done </button>)}
+                    <button type="button" className="add-button" onClick={this.handleBought}>Done </button>)}
                 </div>
                 <div className=" col-3 b-rigth d-none d-md-block">
-                    <button type="button" className="del-button">Delete</button>
+                    <button type="button" className="del-button" onClick={this.handleDelete}>Delete</button>
                 </div>
+                
             </div >
 
 

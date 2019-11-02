@@ -1,9 +1,40 @@
 /* Input Bar */
 .input-bar{
-    width: 62%;
+    width: 50%;
     padding-left: 8px;
    
 }
-.button{
-    padding-left: 10px;
+
+.input{
+   display:flex;
+   flex-direction: column;
+    
+    
+}
+.in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.calendar{
+    padding: 10px 10px; 
+    
+
+    
+}
+.react-date-picker__wrapper {
+    border: 1px solid #ced4da;
+    padding: 4.5px;
+    border-radius: .25rem;
+    background-color: #ffff;
+    
+}
+
+  @media only screen and (min-width:768px){
+  .input-bar{
+        width: 40%;
+        
+      }
+ 
   }
