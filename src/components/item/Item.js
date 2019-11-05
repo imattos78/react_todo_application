@@ -1,17 +1,6 @@
 import React, { Component } from "react";
-
 import "./style.css"
 
-function date(x) {
-    let today = new Date();
-    let dd = today.getDate() + x;
-    let mm = today.getMonth() + 1; //As January is 0.
-    let yyyy = today.getFullYear();
-
-    if (dd < 10) dd = '0' + dd;
-    if (mm < 10) mm = '0' + mm;
-    return (yyyy + "-" + mm + "-" + dd);
-};
 
 class Item extends Component {
 
@@ -33,8 +22,9 @@ class Item extends Component {
                                 <td><i className="fas fa-angle-right arrow">
                                 </i></td>
                                 <td> {!this.props.bought && this.props.text}</td>
-                                <td>{this.props.bought ? this.props.text : this.props.quantity}</td>
-                                <td>{this.props.date === date(0) ? "Today" : this.props.date === date(1) ? "Tomorrow" : this.props.date === date(-1) ? "Yesterday" : this.props.date}</td>
+                                <td>{this.props.bought ? this.props.text : `Items: ${this.props.quantity}`}</td>
+                                <td>{this.props.date}</td>
+                                <td>{!this.props.bought && `Buy: ${this.props.dueBy}`}</td>
                                
 
                             </tr>

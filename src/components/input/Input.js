@@ -1,15 +1,21 @@
 import React, { Component } from "react";
+//import moment from "moment";
 import DatePicker from 'react-date-picker';
+import NumericInput from 'react-numeric-input';
+
+
 import "./Input.css"
-
-
 
 //controlled Component
 
 class Input extends Component {
+
   state = {
+
     newItemText: "",
-    date: new Date()
+    date: new Date(),
+    quantity: ""
+   
   }
   //Functions that update states must always live where the state lives
   updateNewItemText = event => {
@@ -19,29 +25,40 @@ class Input extends Component {
       newItemText: event.target.value
     });
   }
-  handleClick = (event) => {
-    event.preventDefault();
-    this.props.addNewProductFunc(this.state.newItemText);
-    this.setState({
-      newItemText: ""
-    });
-  }
   handleKeyPress = (event) => {
-    if (event.charCode === 13) {
-      this.props.addNewProductFunc(this.state.newItemText);
+    if (event.key === "Enter") {
+      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.quantity);
+
       this.setState({
         newItemText: ""
+        
       });
     }
   }
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.quantity);
+    this.setState({
+      newItemText: ""
+      
+    });
+  }
+  
   handleDateChange = date => {
-    this.setState({ date })
+    console.log(date)
+    this.setState({date});
   }
 
+  handleQuantity = (qty) => {
+    console.log(qty)
+    
+   
+  } 
+  
   render() {
     return (
       <div className="input-group input">
-        <div className="in">
+        <div className="form-group mx-sm-3 mb-2 in">
 
           <input
 
@@ -53,11 +70,25 @@ class Input extends Component {
             onKeyPress={this.handleKeyPress}
 
           ></input>
+
+          <NumericInput 
+          className="form-control" 
+          onChange={this.handleQuantity}
+          value={this.state.quantity}
+          min={0}
+          inputMode="numeric"
+          mobile="auto"
+          
+          />
+          
+
           
           <div className="calendar">
             <DatePicker
               onChange={this.handleDateChange}
-              value={this.state.date} />
+              value={this.state.date} 
+              format="y-MM-dd"
+              />
           </div>
           </div>
 
