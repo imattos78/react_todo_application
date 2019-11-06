@@ -49,12 +49,13 @@ class Input extends Component {
     this.setState({date});
   }
 
+  //STILL WORKING ON IT
   handleQuantity = (qty) => {
     console.log(qty)
     
    
   } 
-  
+
   render() {
     return (
       <div className="input-group input">
