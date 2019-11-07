@@ -59,7 +59,7 @@ class Input extends Component {
   render() {
     return (
       <div className="input-group input">
-        <div className="form-group mx-sm-3 mb-2 in">
+        <div className="form-group mx-sm-3 mb-2 d-flex justify-content-center flex-wrap">
 
           <input
 
@@ -72,7 +72,8 @@ class Input extends Component {
 
           ></input>
 
-          <NumericInput 
+         
+           <NumericInput 
           className="form-control" 
           onChange={this.handleQuantity}
           value={this.state.quantity}
@@ -82,13 +83,14 @@ class Input extends Component {
           
           />
           
+          
 
           
           <div className="calendar">
             <DatePicker
               onChange={this.handleDateChange}
               value={this.state.date} 
-              format="y-MM-dd"
+              format="dd-MM-y"
               />
           </div>
           </div>

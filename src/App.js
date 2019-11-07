@@ -15,11 +15,11 @@ class App extends Component {
   state = {
     products: [
       { text: "Tomato", quantity: 2, bought: true, date: "2019-10-27", id: uuid(), dueBy: "2019-11-30" },
-      { text: "Avocado", quantity: 3, bought: true, date: "2019-10-28", id: uuid(), dueBy: "2019-12-28" },
-      { text: "Bread", quantity: 1, bought: false, date: "2019-11-03", id: uuid(), dueBy: "2019-12-01" },
-      { text: "Water", quantity: 3, bought: false, date: "2019-10-29", id: uuid(), dueBy: "2019-12-08" },
-      { text: "Beer", quantity: 6, bought: true, date: "2019-10-21", id: uuid(), dueBy: "2019-12-20" },
-      { text: "Pizza", quantity: 1, bought: false, date: "2019-10-22", id: uuid(), dueBy: "2019-12-21" }
+      { text: "Avocado", quantity: 3, bought: true, date: "2019-10-28", id: uuid(), dueBy: "28-12-2019" },
+      { text: "Bread", quantity: 1, bought: false, date: "2019-11-03", id: uuid(), dueBy: "01-12-2019" },
+      { text: "Water", quantity: 3, bought: false, date: "2019-10-29", id: uuid(), dueBy: "08-12-2019" },
+      { text: "Beer", quantity: 6, bought: true, date: "2019-10-21", id: uuid(), dueBy: "20-12-2019" },
+      { text: "Pizza", quantity: 1, bought: false, date: "2019-10-22", id: uuid(), dueBy: "21-12-2019" }
 
     ]
   }
@@ -31,7 +31,7 @@ class App extends Component {
       bought: false,
       date: moment().format("YYYY-MM-DD"),
       id: uuid(),
-      dueBy: moment(dueByDate).format("YYYY-MM-DD"),
+      dueBy: moment(dueByDate).format("DD-MM-YYYY"),
       quantity: qty
     }
 

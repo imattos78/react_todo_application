@@ -22,7 +22,7 @@ class Item extends Component {
                                 <td><i className="fas fa-angle-right arrow">
                                 </i></td>
                                 <td> {!this.props.bought && this.props.text}</td>
-                                <td>{this.props.bought ? this.props.text : `Items: ${this.props.quantity}`}</td>
+                                <td>{this.props.bought ? this.props.text : `Qty: ${this.props.quantity}`}</td>
                                 <td>{this.props.date}</td>
                                 <td>{!this.props.bought && `Buy: ${this.props.dueBy}`}</td>
                                

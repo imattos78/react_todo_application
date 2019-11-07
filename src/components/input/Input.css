@@ -1,9 +1,15 @@
 /* Input Bar */
 .input-bar{
     width: 50%;
-    padding-left: 8px;
+    
    
 }
+.react-numeric-input{
+    width:20%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 
 .input{
    display:flex;
@@ -11,14 +17,15 @@
     
     
 }
-.in{
+/* .d-flex{
     display: flex;
     justify-content: center;
     align-items: center;
     
-}
+} */
 .calendar{
-    padding: 10px 10px; 
+    
+    margin-top: 10px;
     
 
     
@@ -33,8 +40,16 @@
 
   @media only screen and (min-width:768px){
   .input-bar{
-        width: 40%;
+        width: 30%;
         
+      }
+      .react-numeric-input{
+        width:8%;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+      .calendar{
+          margin-top: 0;
       }
  
   }
