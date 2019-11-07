@@ -14,7 +14,7 @@ class Input extends Component {
 
     newItemText: "",
     date: new Date(),
-    quantity: ""
+    qty: ""
    
   }
   //Functions that update states must always live where the state lives
@@ -27,7 +27,7 @@ class Input extends Component {
   }
   handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.quantity);
+      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
 
       this.setState({
         newItemText: ""
@@ -37,7 +37,7 @@ class Input extends Component {
   }
   handleClick = (event) => {
     event.preventDefault();
-    this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.quantity);
+    this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
     this.setState({
       newItemText: ""
       
@@ -52,6 +52,7 @@ class Input extends Component {
   //STILL WORKING ON IT
   handleQuantity = (qty) => {
     console.log(qty)
+    this.setState({qty});
     
    
   } 
@@ -76,7 +77,7 @@ class Input extends Component {
            <NumericInput 
           className="form-control" 
           onChange={this.handleQuantity}
-          value={this.state.quantity}
+          value={this.state.qty}
           min={0}
           inputMode="numeric"
           mobile="auto"

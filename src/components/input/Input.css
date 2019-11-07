@@ -17,18 +17,9 @@
     
     
 }
-/* .d-flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-} */
 .calendar{
     
-    margin-top: 10px;
-    
-
-    
+    margin-top: 10px; 
 }
 .react-date-picker__wrapper {
     border: 1px solid #ced4da;
