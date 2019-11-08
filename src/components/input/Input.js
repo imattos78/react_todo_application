@@ -87,6 +87,7 @@ class Input extends Component {
            <NumericInput 
           className="form-control" 
           onChange={this.handleQuantity}
+          onKeyPress={this.handleKeyPress}
           value={this.state.qty}
          
           inputMode="numeric"
