@@ -27,21 +27,35 @@ class Input extends Component {
   }
   handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
-
+      if (this.state.qty <= 0 || this.state.newItemText.length <= 0 ){
+        alert("Add at least one product")
+      }else{
+        this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
+      }
+    }
+    if (this.state.qty > 0){
       this.setState({
         newItemText: ""
         
       });
     }
+    
   }
+  
   handleClick = (event) => {
     event.preventDefault();
-    this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
-    this.setState({
-      newItemText: ""
-      
-    });
+    if (this.state.qty <= 0){
+      alert("Add at least one product")
+    }else{
+      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
+    }
+    if (this.state.qty > 0){
+      this.setState({
+        newItemText: ""
+        
+      });
+    }
+    
   }
   
   handleDateChange = date => {
@@ -51,7 +65,7 @@ class Input extends Component {
 
   //STILL WORKING ON IT
   handleQuantity = (qty) => {
-    console.log(qty)
+    console.log(qty) 
     this.setState({qty});
     
    
