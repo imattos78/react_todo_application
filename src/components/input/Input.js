@@ -45,7 +45,8 @@ class Input extends Component {
       } else {
         this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
         this.setState({
-          newItemText: ""
+          newItemText: "", 
+          qty: 0
 
         });
       }
@@ -60,7 +61,8 @@ class Input extends Component {
     } else {
       this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
       this.setState({
-        newItemText: ""
+        newItemText: "",
+        qty: 0
 
       });
 
