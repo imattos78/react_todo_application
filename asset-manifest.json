@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_todo_application/static/css/main.9c00383c.chunk.css",
+    "main.css": "/react_todo_application/static/css/main.68ef3d48.chunk.css",
     "main.js": "/react_todo_application/static/js/main.b998a568.chunk.js",
     "main.js.map": "/react_todo_application/static/js/main.b998a568.chunk.js.map",
     "runtime-main.js": "/react_todo_application/static/js/runtime-main.659711b3.js",
@@ -9,10 +9,10 @@
     "static/js/2.742122a3.chunk.js": "/react_todo_application/static/js/2.742122a3.chunk.js",
     "static/js/2.742122a3.chunk.js.map": "/react_todo_application/static/js/2.742122a3.chunk.js.map",
     "index.html": "/react_todo_application/index.html",
-    "precache-manifest.c6e7d4424d01d158fccfe36cd7029baf.js": "/react_todo_application/precache-manifest.c6e7d4424d01d158fccfe36cd7029baf.js",
+    "precache-manifest.94b02217a0307e114a8fd3376a8d1a35.js": "/react_todo_application/precache-manifest.94b02217a0307e114a8fd3376a8d1a35.js",
     "service-worker.js": "/react_todo_application/service-worker.js",
     "static/css/2.4482b0e7.chunk.css.map": "/react_todo_application/static/css/2.4482b0e7.chunk.css.map",
-    "static/css/main.9c00383c.chunk.css.map": "/react_todo_application/static/css/main.9c00383c.chunk.css.map",
+    "static/css/main.68ef3d48.chunk.css.map": "/react_todo_application/static/css/main.68ef3d48.chunk.css.map",
     "static/media/Header.css": "/react_todo_application/static/media/market-logo.eef9eda0.png",
     "static/media/index.css": "/react_todo_application/static/media/background_search_mobile.5d0905e6.jpg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.659711b3.js",
     "static/css/2.4482b0e7.chunk.css",
     "static/js/2.742122a3.chunk.js",
-    "static/css/main.9c00383c.chunk.css",
+    "static/css/main.68ef3d48.chunk.css",
     "static/js/main.b998a568.chunk.js"
   ]
 }
