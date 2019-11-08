@@ -14,7 +14,7 @@ class Input extends Component {
 
     newItemText: "",
     date: new Date(),
-    qty: ""
+    qty: 0
    
   }
   //Functions that update states must always live where the state lives
@@ -78,7 +78,7 @@ class Input extends Component {
           className="form-control" 
           onChange={this.handleQuantity}
           value={this.state.qty}
-          min={0}
+         
           inputMode="numeric"
           mobile="auto"
           
@@ -90,6 +90,7 @@ class Input extends Component {
           <div className="calendar">
             <DatePicker
               onChange={this.handleDateChange}
+              onKeyPress={this.handleKeyPress}
               value={this.state.date} 
               format="dd-MM-y"
               />
