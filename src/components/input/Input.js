@@ -25,51 +25,47 @@ class Input extends Component {
       newItemText: event.target.value
     });
   }
-  handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      if (this.state.qty <= 0 || this.state.newItemText.length <= 0 ){
-        alert("Add at least one product")
-      }else{
-        this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
-      }
-    }
-    if (this.state.qty > 0){
-      this.setState({
-        newItemText: ""
-        
-      });
-    }
-    
-  }
-  
-  handleClick = (event) => {
-    event.preventDefault();
-    if (this.state.qty <= 0){
-      alert("Add at least one product")
-    }else{
-      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
-    }
-    if (this.state.qty > 0){
-      this.setState({
-        newItemText: ""
-        
-      });
-    }
-    
-  }
-  
   handleDateChange = date => {
     console.log(date)
     this.setState({date});
   }
 
   
-  handleQuantity = (qty) => {
+  handleQuantity = qty => {
     console.log(qty) 
     this.setState({qty});
     
    
   } 
+  handleKeyPress = event => {
+    if (event.key === "Enter") {
+      if (this.state.qty <= 0 || this.state.newItemText.length <= 0 ){
+        alert("Add at least one product")
+      }else{
+        this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);  
+      this.setState({
+        newItemText: ""
+        
+      });  
+    } 
+  }
+   
+  }
+  
+  handleClick = event => {
+    event.preventDefault();
+    if (this.state.qty <= 0){
+      alert("Add at least one product")
+    }else{
+      this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
+      this.setState({
+        newItemText: ""
+        
+      });
+
+    }
+    
+  }
 
   render() {
     return (
