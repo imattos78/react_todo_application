@@ -15,7 +15,7 @@ class Input extends Component {
     newItemText: "",
     date: new Date(),
     qty: 0
-   
+
   }
   //Functions that update states must always live where the state lives
   updateNewItemText = event => {
@@ -27,44 +27,44 @@ class Input extends Component {
   }
   handleDateChange = date => {
     console.log(date)
-    this.setState({date});
+    this.setState({ date });
   }
 
-  
+
   handleQuantity = qty => {
-    console.log(qty) 
-    this.setState({qty});
-    
-   
-  } 
+    console.log(qty)
+    this.setState({ qty });
+
+
+  }
   handleKeyPress = event => {
     if (event.key === "Enter") {
-      if (this.state.qty <= 0 || this.state.newItemText.length <= 0 ){
+      if (this.state.qty <= 0 || this.state.newItemText.length <= 0) {
         alert("Add at least one product")
-      }else{
-        this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);  
-      this.setState({
-        newItemText: ""
-        
-      });  
-    } 
+      } else {
+        this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
+        this.setState({
+          newItemText: ""
+
+        });
+      }
+    }
+
   }
-   
-  }
-  
+
   handleClick = event => {
     event.preventDefault();
-    if (this.state.qty <= 0){
+    if (this.state.qty <= 0) {
       alert("Add at least one product")
-    }else{
+    } else {
       this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
       this.setState({
         newItemText: ""
-        
+
       });
 
     }
-    
+
   }
 
   render() {
@@ -83,40 +83,54 @@ class Input extends Component {
 
           ></input>
 
-         
-           <NumericInput 
-          className="form-control" 
-          onChange={this.handleQuantity}
-          onKeyPress={this.handleKeyPress}
-          value={this.state.qty}
-         
-          inputMode="numeric"
-          mobile="auto"
-          
-          />
-          
-          
 
-          
+          <NumericInput
+            className="form-control"
+            onChange={this.handleQuantity}
+            onKeyPress={this.handleKeyPress}
+            value={this.state.qty}
+            min={0}
+            inputMode="numeric"
+            mobile="auto"
+            style={{
+              btnDown: {
+                background: '#f04048'
+              },
+              btnUp:{
+                background: '#f04048'
+              },
+              minus:{
+                background: '#ffff'
+              },
+              plus:{
+                background: '#ffff'
+              }
+            }}
+
+          />
+
+
+
+
           <div className="calendar">
             <DatePicker
               onChange={this.handleDateChange}
               onKeyPress={this.handleKeyPress}
-              value={this.state.date} 
+              value={this.state.date}
               format="dd-MM-y"
-              />
+            />
           </div>
-          </div>
+        </div>
 
 
 
-          <div className="button d-flex justify-content-center">
-            <button type="button" className="buttons show" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}><i className="fas fa-cart-plus add-icon"></i></button>
-          </div>
-          <div className="button d-none d-md-block">
-            <button type="button" className="add-button" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>Add</button>
-          </div>
-        
+        <div className="button d-flex justify-content-center">
+          <button type="button" className="buttons show" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}><i className="fas fa-cart-plus add-icon"></i></button>
+        </div>
+        <div className="button d-none d-md-block">
+          <button type="button" className="add-button" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>Add</button>
+        </div>
+
       </div>
 
 

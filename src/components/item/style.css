@@ -63,7 +63,7 @@
    }
 
    .cruz-icon, .trash-icon{
-    color: rgb(255, 121, 121);
+    color: #f04048;
     font-size: 2.3em;
     
    }
@@ -84,7 +84,7 @@
   .buttons:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
-    /* background-color: rgb(121, 118, 118); */
+    
     
   }
 
@@ -98,17 +98,12 @@
     margin-top: 15px;
   }
 
-  /* Output List */
-  /* #prod-to-buy{
-    padding-top: 15px;
-    font-size: 100%;
-  } */
-
+ 
 
   /* Arrow */
   
   .arrow{
-      color: red;
+      color: #f04048;
       font-size: 1.2em; 
       padding: 0;          
   }
