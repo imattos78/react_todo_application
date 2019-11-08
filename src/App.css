@@ -2,24 +2,13 @@
   text-align: center;
 }
 
-.container{
-  
-  background-image: url("./images/background_search_mobile.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-  
-     
-}
+
 h5{
   color: #ffff;
 }
 @media only screen and (min-width:768px){
 
-  .container{
-    background-image:none;
-  }
+  
   h5{
     color: black;
   }
