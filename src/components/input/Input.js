@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 import React, { Component } from "react";
 //import moment from "moment";
 import DatePicker from 'react-date-picker';
@@ -91,11 +92,11 @@ class Input extends Component {
             value={this.state.qty}
             min={0}
             inputMode="numeric"
-            mobile="auto"
+            mobile='true'
             style={{
               btnDown: {
-                background: '#f04048'
-              },
+                 background: '#f04048'
+               },
               btnUp:{
                 background: '#f04048'
               },
@@ -104,9 +105,11 @@ class Input extends Component {
               },
               plus:{
                 background: '#ffff'
-              }
+              },
+             'btn:hover':{
+               background: '#929292'
+             }
             }}
-
           />
 
 

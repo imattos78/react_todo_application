@@ -10,7 +10,6 @@
     margin-right: 8px;
 }
 
-
 .input{
    display:flex;
    flex-direction: column;
@@ -30,13 +29,15 @@
 }
 
 
+
+
   @media only screen and (min-width:768px){
   .input-bar{
         width: 30%;
         
       }
       .react-numeric-input{
-        width:8%;
+        width:12%;
         margin-left: 8px;
         margin-right: 8px;
     }
