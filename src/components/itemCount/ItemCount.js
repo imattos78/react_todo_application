@@ -1,12 +1,27 @@
-import React, {Component} from "react"
-import "./ItemCount.css"
+// import React, {Component} from "react";
+import React, { Component} from 'react';
+import "./ItemCount.css";
+import randomColor from 'randomcolor';
+
+
+
 
 class ItemCount extends Component{
+   
+   
+
     render(){
+        const colorRandom = randomColor();
+        const numberstyle ={
+            color: colorRandom,
+            fontSize: "45px",
+            border: "3px solid",
+            
+        };
         return (
             <div className="row d-none d-md-block">
             <div className="col intro-component">
-                <h5>You have {this.props.count} products to buy in the list:</h5>
+                <h4><span style={numberstyle}>{this.props.count}</span> Products To Buy In The List:</h4>
                
             </div>
         </div>

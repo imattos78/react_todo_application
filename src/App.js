@@ -8,6 +8,7 @@ import ItemCount from "./components/itemCount/ItemCount";
 import Item from "./components/item/Item";
 
 
+
 import './App.css';
 
 
@@ -85,7 +86,7 @@ class App extends Component {
         {pendingBuy.map(prod => <Item text={prod.text} bought={prod.bought} quantity={prod.quantity} key={prod.id} id={prod.id} deleteProductFunc={this.deleteProduct} boughtProductFunc={this.boughtProduct} dueBy={prod.dueBy} />
         )}
 
-        <h5 className="title">You recently bought: </h5>
+        <h5 className="title">You have bought {boughtProduct.length} products: </h5>
 
         {boughtProduct.map(prod => <Item text={prod.text} bought={prod.bought} key={prod.id} id={prod.id} deleteProductFunc={this.deleteProduct} dueBy={prod.dueBy} />
         )}

@@ -42,11 +42,14 @@ class Input extends Component {
     if (event.key === "Enter") {
       if (this.state.qty <= 0 || this.state.newItemText.length <= 0) {
         alert("Add at least one product")
-      } else {
+      } else if (this.state.date === null){
+        alert ("Date required")
+      }else {
         this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
         this.setState({
           newItemText: "", 
-          qty: 0
+          qty: 0,
+          date: new Date()
 
         });
       }
@@ -58,11 +61,14 @@ class Input extends Component {
     event.preventDefault();
     if (this.state.qty <= 0) {
       alert("Add at least one product")
-    } else {
+    } else if (this.state.date === null){
+      alert ("Date required")
+    }else {
       this.props.addNewProductFunc(this.state.newItemText, this.state.date, this.state.qty);
       this.setState({
         newItemText: "",
-        qty: 0
+        qty: 0,
+        date: new Date()
 
       });
 
@@ -123,6 +129,7 @@ class Input extends Component {
               onKeyPress={this.handleKeyPress}
               value={this.state.date}
               format="dd-MM-y"
+              required='true'
             />
           </div>
         </div>
@@ -132,7 +139,7 @@ class Input extends Component {
         <div className="button d-flex justify-content-center">
           <button type="button" className="buttons show" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}><i className="fas fa-cart-plus add-icon"></i></button>
         </div>
-        <div className="button d-none d-md-block">
+        <div className="button d-none d-md-block ">
           <button type="button" className="add-button" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>Add</button>
         </div>
 
