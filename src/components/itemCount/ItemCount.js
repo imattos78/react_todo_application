@@ -15,15 +15,15 @@ class ItemCount extends Component{
         const numberstyle ={
             color: colorRandom,
             fontSize: "32px",
-            border: "3px solid",
+            border: "5px solid",
             borderRadius: "50%",
-            padding: "1% 2%",
+            padding: "0.5% 1.5%",
             marginLeft: "30%" 
         };
         return (
             <div className="row d-none d-md-block">
             <div className="col intro-component">
-                <h4><span style={numberstyle}>{this.props.count}</span> Products To Buy In The List:</h4>
+                <h4><span style={numberstyle}>{this.props.count}</span> Products to buy from the list:</h4>
                
             </div>
         </div>
