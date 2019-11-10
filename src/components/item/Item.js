@@ -18,7 +18,7 @@ class Item extends Component {
                 <div className="col-1 arrow-align">
                     <p> <i className="fas fa-angle-right arrow"></i></p>
                 </div>
-                <div className={!this.props.bought ? "col-3 col-sm-1 d-flex align-self-center" : "d-none d-md-block"}>
+                <div className={!this.props.bought ? "col-3 col-sm-1 d-flex align-self-center text-product-buy" : "d-none d-md-block"}>
                     <p>{!this.props.bought && this.props.text}</p>
                 </div>
                 <div className={this.props.bought ? "col-3 col-sm-2":"col-3 col-sm-2 d-flex justify-content-center"}>
@@ -48,8 +48,6 @@ class Item extends Component {
                 </div>
 
             </div >
-
-
 
 
         );

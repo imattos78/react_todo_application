@@ -25,7 +25,6 @@ class ItemCount extends Component{
                
             </div>
         </div>
-       
 
         );
     }

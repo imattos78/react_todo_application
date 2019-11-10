@@ -74,6 +74,10 @@
   /* Product-to-buy text */
   .text{
       color: #ffff; 
+      font-size: 1.1em;
+  }
+  .text-product-buy{
+    font-weight: bold;
   }
  
  
@@ -96,9 +100,9 @@
    
 
   }  
-  p{
-      font-size: 1.1em;
-  }
+  /* p{
+     
+  } */
 
   @media only screen and (min-width:768px){
     .show{
