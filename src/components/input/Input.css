@@ -37,6 +37,7 @@
     cursor: pointer;
     transition: 0.5s;
     margin-left: 46%;
+    margin-top: 1%;
     
   }
   .add-button:focus{

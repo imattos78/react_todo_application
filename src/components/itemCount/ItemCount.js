@@ -14,9 +14,11 @@ class ItemCount extends Component{
         const colorRandom = randomColor();
         const numberstyle ={
             color: colorRandom,
-            fontSize: "45px",
+            fontSize: "32px",
             border: "3px solid",
-            
+            borderRadius: "50%",
+            padding: "1% 2%",
+            marginLeft: "30%" 
         };
         return (
             <div className="row d-none d-md-block">
