@@ -7,9 +7,6 @@ import randomColor from 'randomcolor';
 
 
 class ItemCount extends Component{
-   
-   
-
     render(){
         const colorRandom = randomColor();
         const numberstyle ={
