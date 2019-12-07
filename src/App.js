@@ -11,6 +11,7 @@ import Item from "./components/item/Item";
 
 
 import './App.css';
+//import DatePicker from 'react-date-picker';
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
       
     .then((response) => {
         const productsFromDB = response.data; 
+        
       this.setState ({
         products: productsFromDB
       
@@ -38,33 +40,46 @@ class App extends Component {
   // This func should update the state with a new task
   addNewProduct = (prodText, dueByDate, qty) => {
     const productCopy = this.state.products.slice();
+    console.log(productCopy)
     const newProduct = {
       item_name: prodText,
       completed: false,
       date: moment().format("YYYY-MM-DD"),
-      item_id: 1,
-      due_date: moment(dueByDate).format("DD-MM-YYYY"),
-      quantity: qty
+      //item_id: 1,
+      due_date: dueByDate,
+      quantity: qty,
+      user_id: 1
     }
+    axios.post("https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products", newProduct)
+      .then((response)=>{
+          console.log(response);
+           const productsFromDB = response.data;
+            productCopy.push(productsFromDB)
+           this.setState({
+            products: productCopy
 
-    productCopy.push(newProduct)
-    this.setState({
-      products: productCopy
-    });
+          });
+      })
+      .catch((err)=>{
+        console.log("Error inserting product", err);
+      });
   };
 
   //Remove the product with th ID in question from this.state.products   
      deleteProduct = id => {
-    console.log(id)
+      axios.delete("https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/" + id)
+        .then((response)=>{
+          const filteredProduct = this.state.products.filter(product =>{
+            return product.item_id !== id
+          })
+          this.setState({
+            products: filteredProduct
+          });
+        })
+          .catch((err)=>{
+            console.log(err);
+          })
 
-  //   //filter to remove the product that we want to delete
-    const filteredProduct = this.state.products.filter((product) => product.id !== id)
-    console.log(filteredProduct)
-
-    //setState
-    this.setState({
-      products: filteredProduct
-    });
   };
 
    boughtProduct = id => {
@@ -79,11 +94,13 @@ class App extends Component {
         products: updatedProduct
      })
   }
-
+  
   render() {
 
-    const boughtProduct = this.state.products.filter(prod => prod.completed );
-    const pendingBuy = this.state.products.filter(prod => !prod.completed);
+    const boughtProduct = this.state.products.filter(prod =>{
+      return prod.completed
+    })
+    const pendingBuy = this.state.products.filter(prod => !prod.completed)
     console.log(boughtProduct);
     console.log(pendingBuy);
 
@@ -94,12 +111,12 @@ class App extends Component {
         <Input addNewProductFunc={this.addNewProduct} />
 
         <ItemCount count={pendingBuy.length} />
-        {pendingBuy.map(prod => <Item text={prod.item_name} bought={prod.completed} quantity={prod.quantity} key={prod.item_id} id={prod.item_id} deleteProductFunc={this.deleteProduct} boughtProductFunc={this.boughtProduct} dueBy={prod.due_date} />
+        {pendingBuy.map(prod => <Item text={prod.item_name} bought={prod.completed} quantity={prod.quantity} key={prod.item_id} id={prod.item_id} deleteProductFunc={this.deleteProduct} boughtProductFunc={this.boughtProduct} dueBy={moment(prod.due_date).format("DD-MM-YYYY")} />
         )}
 
         <h5 className="title">You have bought {boughtProduct.length} products: </h5>
 
-        {boughtProduct.map(prod => <Item text={prod.item_name} bought={prod.completed} key={prod.item_id} id={prod.item_id} deleteProductFunc={this.deleteProduct} dueBy={prod.due_date} />
+        {boughtProduct.map(prod => <Item text={prod.item_name} bought={prod.completed} key={prod.item_id} id={prod.item_id} deleteProductFunc={this.deleteProduct} dueBy={moment(prod.due_date).format("DD-MM-YYYY")} />
         )}
 
 

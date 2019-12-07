@@ -100,7 +100,7 @@ class Input extends Component {
             value={this.state.qty}
             min={0}
             inputMode="numeric"
-            mobile='true'
+            mobile= {true}
             style={{
               btnDown: {
                  background: '#f04048'
@@ -129,7 +129,7 @@ class Input extends Component {
               onKeyPress={this.handleKeyPress}
               value={this.state.date}
               format="dd-MM-y"
-              required='true'
+              required= {true}
             />
           </div>
         </div>
