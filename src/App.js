@@ -11,7 +11,7 @@ import Item from "./components/item/Item";
 
 
 import './App.css';
-//import DatePicker from 'react-date-picker';
+
 
 
 
@@ -67,7 +67,7 @@ class App extends Component {
 
   //Remove the product with th ID in question from this.state.products   
      deleteProduct = id => {
-      axios.delete("https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/" + id)
+      axios.delete(`https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/"${id}`)
         .then((response)=>{
           const filteredProduct = this.state.products.filter(product =>{
             return product.item_id !== id
@@ -83,23 +83,39 @@ class App extends Component {
   };
 
    boughtProduct = id => {
-      console.log("This id is " + id);
-      const updatedProduct = this.state.products.map(product => {
-        if (product.item_id === id) {
-           product.completed = true;
-        }
-         return product;
-      });
-       this.setState({
-        products: updatedProduct
-     })
-  }
+    
+    const updatedProduct = this.state.products.filter(product => product.item_id === id);
+    console.log(updatedProduct)
+    let products = this.state.products;
+    
+    const data = {
+      item_name: updatedProduct[0].item_name,
+      completed: !updatedProduct[0].completed,
+      date: updatedProduct[0].date,
+      //item_id: 1,
+      due_date: updatedProduct[0].due_date,
+      quantity: updatedProduct[0].quantity,
+      user_id: updatedProduct[0].user_id,
+    }
+    updatedProduct[0].completed = data.completed;
+
+     axios.put(`https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/${id}`, data)
+      .then((response) =>{
+         
+        this.setState({
+          products: products
+       })
+
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+      
+  };
   
   render() {
 
-    const boughtProduct = this.state.products.filter(prod =>{
-      return prod.completed
-    })
+    const boughtProduct = this.state.products.filter(prod => prod.completed)
     const pendingBuy = this.state.products.filter(prod => !prod.completed)
     console.log(boughtProduct);
     console.log(pendingBuy);
