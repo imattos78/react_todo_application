@@ -67,7 +67,7 @@ class App extends Component {
 
   //Remove the product with th ID in question from this.state.products   
      deleteProduct = id => {
-      axios.delete(`https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/"${id}`)
+      axios.delete(`https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/${id}`)
         .then((response)=>{
           const filteredProduct = this.state.products.filter(product =>{
             return product.item_id !== id
