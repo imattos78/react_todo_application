@@ -1,122 +1,137 @@
+/* Big Buttons */
 
-  
-   /* Big Buttons */
-  
-   .done-button{
-    padding: 0.375rem 2.0rem;
-    color: #ffff;
-    border-right: 1px solid #4CAF50;
-    border-left: 1px solid #4CAF50;
-    border-radius: 4px;
-    background-color: #4CAF50;
-    cursor: pointer;
-    transition: 0.5s;
-    margin-left: 32%;
-    
-  }
-  .done-button:focus{
-    outline: 0;
-    padding: 0.4rem 2.3rem;
-  }
-  .done-button:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
+.done-button {
+  padding: 0.375rem 2.0rem;
+  color: #ffff;
+  border-right: 1px solid #359a39;
+  border-left: 1px solid #359a39;
+  border-radius: 4px;
+  background-color: #359a39;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 32%;
 
-  }
-  
-   .del-button{
-    padding: 0.375rem 2.0rem;
-    color: #ffff;
-    border-radius: 4px;
-    background-color: #f04048;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-  .del-button:focus{
-    outline: 0;
-    padding: 0.4rem 2.3rem;
-  }
-  .del-button:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-   
+}
 
-  }
-  
-  /* Small Buttons */
-  .buttons{
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: 0.7s;
-  }
-  .add-icon, .check-icon {
-    
-    color: rgb(139, 231, 142);
-    font-size: 2.3em;
-  
-    
-   }
+.done-button:focus {
+  outline: 0;
+  padding: 0.4rem 2.3rem;
+}
 
-   .cruz-icon, .trash-icon{
-    color: #f04048;
-    font-size: 2.3em;
-    
-   }
-  
-  .buttons:focus{
-    outline: 0;
-  }
-  .buttons:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
-  }
+.done-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  /* Product-to-buy text */
-  .text{
-      color: #ffff; 
-      font-size: 1.1em;
-  }
-  .text-product-buy{
-    font-weight: bold;
-  }
- 
- 
 
-  /* Arrow */
-  
-  .arrow{
-     
-      color: #f04048;
-      font-size: 1.2em; 
-      padding: 0;   
-           
-  }
-  .arrow-align {
-    display: flex;
-    justify-content:flex-end;
-    
-   
-    
-   
+}
 
-  }  
-  /* p{
+.del-button {
+  padding: 0.375rem 2.0rem;
+  color: #ffff;
+  border-radius: 4px;
+  background-color: #f1121c;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.del-button:focus {
+  outline: 0;
+  padding: 0.4rem 2.3rem;
+}
+
+.del-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+/* Small Buttons */
+.buttons {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.add-icon,
+.check-icon {
+
+  color: #359a39;
+  font-size: 2.3em;
+  /* opacity: 1; */
+
+
+}
+
+.cruz-icon,
+.trash-icon {
+  color: #f1121c;
+  font-size: 2.3em;
+
+}
+
+.buttons:focus {
+  outline: 0;
+}
+
+.buttons:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* Product-to-buy text */
+.text {
+  color: rgb(34, 31, 31);
+  font-size: 1.1em;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.80;
+  border: 10px solid rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.1);
+  transition: 0.3s;
+}
+
+.text-product-buy {
+  font-weight: bold;
+}
+
+
+
+/* Arrow */
+
+.arrow {
+
+  color: #f1121c;
+  font-size: 1.2em;
+  padding: 0;
+
+}
+
+.arrow-align {
+  display: flex;
+  justify-content: flex-end;
+
+
+
+
+
+}
+
+/* p{
      
   } */
 
-  @media only screen and (min-width:768px){
-    .show{
-      display: none;
-    }
-   
-    .logo{
-      max-width: 20%;
-      height: auto;
-    }
-    
-    .text{
-      color:black;
-      
-    }
-    
+@media only screen and (min-width:768px) {
+  .show {
+    display: none;
+  }
+
+  .logo {
+    max-width: 20%;
+    height: auto;
+  }
+
+  .text {
+    color: black;
+
+  }
+
 }
