@@ -130,7 +130,7 @@ class App extends Component {
         {pendingBuy.map(prod => <Item text={prod.item_name} bought={prod.completed} quantity={prod.quantity} key={prod.item_id} id={prod.item_id} deleteProductFunc={this.deleteProduct} boughtProductFunc={this.boughtProduct} dueBy={moment(prod.due_date).format("DD-MM-YYYY")} />
         )}
 
-        <h5 className="title">You have bought {boughtProduct.length} products: </h5>
+        <h5 className="title">You bought {boughtProduct.length} products: </h5>
 
         {boughtProduct.map(prod => <Item text={prod.item_name} bought={prod.completed} key={prod.item_id} id={prod.item_id} deleteProductFunc={this.deleteProduct} dueBy={moment(prod.due_date).format("DD-MM-YYYY")} />
         )}
