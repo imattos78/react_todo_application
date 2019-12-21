@@ -83,27 +83,21 @@ class App extends Component {
   };
 
    boughtProduct = id => {
-    
-    const updatedProduct = this.state.products.filter(product => product.item_id === id);
-    console.log(updatedProduct)
-    let products = this.state.products;
-    
-    const data = {
-      item_name: updatedProduct[0].item_name,
-      completed: !updatedProduct[0].completed,
-      date: updatedProduct[0].date,
-      //item_id: 1,
-      due_date: updatedProduct[0].due_date,
-      quantity: updatedProduct[0].quantity,
-      user_id: updatedProduct[0].user_id,
-    }
-    updatedProduct[0].completed = data.completed;
 
-     axios.put(`https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/${id}`, data)
+    const boughtProducts = this.state.products;
+    let selectedProduct = {};
+    boughtProducts.forEach(item =>{
+      if (item.item_id === id){
+        item.completed = true;
+        selectedProduct = item;
+      }
+    });
+
+     axios.put(`https://awfu5c5hx6.execute-api.eu-west-1.amazonaws.com/dev/products/${id}`, selectedProduct)
       .then((response) =>{
          
         this.setState({
-          products: products
+          products: boughtProducts
        })
 
       })
